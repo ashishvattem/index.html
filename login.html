@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/Sign up.html">Sign up</a></p>
+    </div>
+</body>
+  <style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.book {
+  position: relative;
+  width: 40px;
+  height: 60px;
+  margin: 20px;
+  transform-origin: center;
+  animation: rotateBook 3s linear infinite;
+}
+
+.book:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.spine {
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  background: #8e44ad;
+  left: 0;
+  transform-origin: right;
+}
+
+.cover {
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  background: #3498db;
+  left: 10px;
+  transform-origin: left;
+}
+
+@keyframes rotateBook {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="book">
+    <div class="spine"></div>
+    <div class="cover"></div>
+  </div>
+  <div class="book">
+    <div class="spine"></div>
+    <div class="cover"></div>
+  </div>
+</body>
+</html>
